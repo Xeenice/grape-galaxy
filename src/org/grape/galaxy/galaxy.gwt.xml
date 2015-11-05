@@ -5,6 +5,8 @@
 
 	<inherits name="com.smartgwt.SmartGwtNoTheme" />
 	<inherits name="com.smartclient.theme.graphite.Graphite"/>
+	
+	<inherits name="com.google.web.bindery.event.Event"/>
 
 	<!-- Specify the app entry point class. -->
 	<entry-point class="org.grape.galaxy.client.GalaxyView" />
