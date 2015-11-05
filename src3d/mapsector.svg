@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   id="svg4405"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="mapsector.svg"
+   inkscape:export-filename="C:\work\Galaxy\src3d\textures\mapsector.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4407" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0896626"
+     inkscape:cx="70.692782"
+     inkscape:cy="-16.882131"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="997"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4410">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-988.36217)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect4427"
+       width="64"
+       height="64"
+       x="0"
+       y="988.36218"
+       ry="0"
+       sodipodi:insensitive="true" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.15107913;stroke:#ffffff;stroke-width:1.05882347;stroke-opacity:0.30215825"
+       id="rect2987"
+       width="52.941177"
+       height="52.941177"
+       x="5.5294118"
+       y="993.8916"
+       ry="5.0913239"
+       inkscape:tile-cx="39.798224"
+       inkscape:tile-cy="39.798199"
+       inkscape:tile-w="59.408283"
+       inkscape:tile-h="59.408283"
+       inkscape:tile-x0="10.094083"
+       inkscape:tile-y0="10.094058" />
+  </g>
+</svg>

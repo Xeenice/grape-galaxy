@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<cron>
+		<description>Warmup request</description>
+		<url>/_ah/warmup</url>
+		<schedule>every 1 mins</schedule>
+	</cron>
+	<cron>
+		<description>Compute all activities in galaxy</description>
+		<url>/computeGalaxy</url>
+		<schedule>every 2 mins</schedule>
+	</cron>
+	<cron>
+		<description>Compute rating of users</description>
+		<url>/computeRating</url>
+		<schedule>every day 15:00</schedule>
+	</cron>
+	<cron>
+		<description>Dump data from cache to data storage</description>
+		<url>/computeGalaxy?dump=true&amp;y=499997</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Dump data from cache to data storage</description>
+		<url>/computeGalaxy?dump=true&amp;y=499998</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Dump data from cache to data storage</description>
+		<url>/computeGalaxy?dump=true&amp;y=499999</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Dump data from cache to data storage</description>
+		<url>/computeGalaxy?dump=true&amp;y=500000</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Dump data from cache to data storage</description>
+		<url>/computeGalaxy?dump=true&amp;y=500001</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Dump data from cache to data storage</description>
+		<url>/computeGalaxy?dump=true&amp;y=500002</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Dump data from cache to data storage</description>
+		<url>/computeGalaxy?dump=true&amp;y=500003</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Update history messages in cache</description>
+		<url>/updateHistory</url>
+		<schedule>every 60 mins</schedule>
+	</cron>
+	<cron>
+		<description>Autokick</description>
+		<url>/admin?autokick=true</url>
+		<schedule>every day 12:00</schedule>
+	</cron>
+</cronentries>

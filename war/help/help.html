@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<title>Галактика. Как играть?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="ru" />
+<meta name="description"
+	content="Галактика. Правила. Как играть? Бесплатная многопользовательская 3D игра. Стратегия реального времени. Запускается в браузерах, поддерживающих технологию WebGL (Chrome, Firefox и др.). Не требует плагинов." />
+<meta name="keywords"
+	content="free browser game, бесплатная браузерная игра, browser 3d game, браузерная 3d игра, MMO strategy, многопользовательская стратегия, MMO RTS browser 3d game, многопользовательская браузерная 3d стратегия, 3d, MMO, RTS, HTML5, WebGL, Google App Engine, GAE, Google Web Toolkit, GWT, strategy, стратегия, galaxy, галактика, grape galaxy, free galaxy 3d, google app engine galaxy, gae galaxy, google web toolkit galaxy, gwt galaxy, gae gwt galaxy, gae gwt grape" />
+<link type="text/css" rel="stylesheet" href="/css/common.css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" language="javascript"
+	src="/js/jquery-1.6.2.min.js"></script>
+<script language="javascript">
+	$("img.screenshot").live("click", function() {
+		$(this).hide();
+	}).live("mouseout", function() {
+		$(this).hide();
+	});
+	$("a.screenshot").live(
+			"click",
+			function(event) {
+				var screenshotId = ($(this).attr("id") + "Screenshot");
+				var screenshot = $("#" + screenshotId);
+				if (screenshot.is(":visible")) {
+					screenshot.hide();
+				} else {
+					screenshot.show();
+					var left = Math.min($(document.body).width()
+							- screenshot.width() - 2, Math.max(0,
+							(event.pageX - (screenshot.width() - 2) / 2)));
+					var top = Math.max($(window).scrollTop(), (event.pageY
+							- screenshot.height() + 10));
+					screenshot.offset({
+						left : left,
+						top : top
+					});
+				}
+			});
+</script>
+</head>
+<body>
+	<div class="body"
+		style="width: 100%; height: 100%; margin: 0; padding: 0">
+		<div class="topimage"
+			style="width: 100%; height: 100%; margin: 0; padding: 0">
+			<div class="header"
+				style="width: 100%; height: 250px; margin: 0; padding: 0;">
+				<h1 style="padding-top: 30px">Галактика. Как играть?</h1>
+			</div>
+			<div class="help-body">
+				<h3>
+					<img src="/images/jet.png" class="jet" /> Цель игры
+				</h3>
+				<p>Вы правитель галактической империи. В Вашем распоряжении
+					несколько планет, на которых можно добывать ресурс и пополнять
+					армию. Цель - захватить как можно больше планет в непрерывных
+					сражениях с другими игроками. Однако, тоталитарный режим и полное
+					отсутствие внешней политики :) не могут помешать Вам заключать
+					негласные соглашения с дргими правителями и вести совместную игру.</p>
+				<h3>
+					<img src="/images/jet.png" class="jet" /> Начало игры
+				</h3>
+				<p>
+					Прежед всего, чтобы войти в игру нужно зарегистрировать почту на <a
+						href="https://mail.google.com">Gmail</a> (подойдёт также аккаунт
+					на любом другом сервисе Google). Обратите внимание на ссылки в <a
+						id="loginReduced" class="screenshot" href="javascript: void(0);">правом
+						нижнем углу страницы входа в игру (блог игры и гаджет)</a>.
+				</p>
+				<p>
+					Весь интерфейс расположен на одной странице. После успешного входа
+					Вам следует выбрать базовую планету. Базовой может быть любая
+					планета. Базу можно выбрать только раз и никто не может её у Вас
+					отвоевать. Поэтому желательно прочитать весь мануал, перед тем как
+					делать выбор. Чтобы основать базу выберите любую планету в <a
+						id="baseSelection1" class="screenshot" href="javascript: void(0);">центральной
+						части главного окна</a> и отдайте приказ "Развернуть базу" в <a
+						id="baseSelection2" class="screenshot" href="javascript: void(0);">правой
+						части главного окна</a>.
+				</p>
+				<h3>
+					<img src="/images/jet.png" class="jet" /> Игровая модель и
+					Интерфейс
+				</h3>
+				<p>
+					Галактика поделена на 49 квадратных секторов. Каждый сектор имеет
+					уникальный индекс. Сектора отличаются количеством и "качеством"
+					планет. Списки планет и перебросок находятся в <a id="leftSide"
+						class="screenshot" href="javascript: void(0);">левой части
+						главного окна</a>.
+				</p>
+				<p>
+					В центральной части главного окна расположено 3D представление
+					текущего сектора. Для перехода из текущего сектора в один из
+					соседних служат <a id="portals" class="screenshot"
+						href="javascript: void(0);">порталы по краям сектора</a>. Для
+					быстрого перехода в произвольный сектор служит карта галактики.
+					Карту можно открыть/скрыть кнопкой в <a id="galaxyMapButton"
+						class="screenshot" href="javascript: void(0);">правом верхнем
+						углу главного окна.</a>. На карте схематично изображены все сектора
+					галактики. Планеты обзначены точками серого (бот), желтого (друг) и
+					красного (враг) цветов.
+				</p>
+				<p>
+					Каждая планета - это источник ресурса и место базирования флота.
+					Таблица в левой части галвного окна показывает информацию по всем
+					параметрам планет сектора. В <a id="rightSide" class="screenshot"
+						href="javascript: void(0);">правой части главного окна</a>
+					расположены элементы управления выбранной панетой.
+				</p>
+				<p>
+					Основные параметры планеты: текущий уровень ресурса, кол-во
+					кораблей на орбите, коэффициент защиты. Планеты отличаются
+					предельными значениями этих параметров. Добыча ресурса происходит
+					автоматически с течением времени. Производство кораблей на планете
+					можно запустить/остановить соответствующим приказом в <a
+						id="rightSide1" class="screenshot" href="javascript: void(0);">правой
+						части главного окна</a>. Производство достаточно быстро тратит ресурс,
+					поэтому дефицит ресурса может сильно "затормозить" темпы пополнения
+					флота.
+				</p>
+				<p>
+					Коэфф. защиты - это важный тактический параметр планеты. Чем выше
+					его значение, тем "крепче" защита планеты. Для увеличения этого
+					параметра необходимо отдать приказ на включение защиты планеты в <a
+						id="rightSide1" class="screenshot" href="javascript: void(0);">разделе
+						приказов текущей планеты</a>. Для активации защиты требуется небольшое
+					фиксированное кол-во ресурса, при этом весь добываемый ресурс
+					уходит на поддержание щита. Это означает, что после включения
+					защиты уровень ресурса будет оставться неизменным (если нет
+					производства). Помните, что защита не имеет смысла если на орбите
+					мало кораблей.
+				</p>
+				<p>
+					Переброски служат для атак и для перераспределения флота и
+					ресурсов. В конечном счёте, это основное действие в игре. Если Ваш
+					флот переброшен на "родную" планету, то происходит присоединение,
+					при этом кол-во кораблей на орбите не может превысить маскимальное
+					значение для этой планеты. Если же Ваш флот "оказался" на
+					враждебной планете, то происходит сражение, в результате которого
+					Вы можете захватить планету или потерять флот. В пределах одного
+					сектора переброски флота можно осуществлять <a id="fastTrans"
+						class="screenshot" href="javascript: void(0);">перетаскиванием</a>
+					с одной планеты на другую. При этом будет переброшено 100% флота.
+					Для осуществления произвольных перебросок служит форма в <a
+						id="rightSide2" class="screenshot" href="javascript: void(0);">правой
+						части главного окна</a>. Форма заполняется последовательно. Клик по <a
+						id="rightSide2a" class="screenshot" href="javascript: void(0);">ссылке
+						с процентом</a> открывает "ползунок" для опредения объёма переброски.
+					Далее необходимо определить <a id="rightSide2b" class="screenshot"
+						href="javascript: void(0);">тип перебрски</a>. Затем нужно задать
+					<a id="rightSide2c" class="screenshot" href="javascript: void(0);">исходную
+						и целевую планеты</a>. Например, кликаете на "Планеты А" и выбираете
+					планету в центральной части главного окна или любым другим
+					способом; при этом поле будет заполнено именем планеты. Когда все
+					поля заполнены, подтвердите переброску <a id="rightSide2d"
+						class="screenshot" href="javascript: void(0);">непосредственно
+						в форме</a> или же в <a id="rightSide2e" class="screenshot"
+						href="javascript: void(0);">центральной части главного окна</a>.
+					Не пренебрегайте переброской ресурсов, это важный тактический
+					приём. К тому же, доставка ресурса происходит в два раза быстрее
+					переброски флота.
+				</p>
+				<h3>
+					<img src="/images/jet.png" class="jet" /> Тактика
+				</h3>
+				<p>...</p>
+				<h3>
+					<img src="/images/jet.png" class="jet" /> Google Desktop Gadget
+				</h3>
+				<p>
+					Если вы являетесь пользователем <a
+						href="http://desktop.google.com/ru/">Google Desktop</a>, а работы
+					так много, что некогда заглянуть в "Галактику" :) то <a
+						href="/res/galaxy/galaxy-gadget.gg">этот гаджет</a> для Вас. Он
+					позволяет отслеживать все события в "Галактике". После установки,
+					зайдите в <a id="gadget1" class="screenshot"
+						href="javascript: void(0);">раздел настроек гаджета</a> и <a
+						id="gadget2" class="screenshot" href="javascript: void(0);">введите
+						ваше игровое имя</a> для фильтрации событий.
+				</p>
+
+				<img id="loginReducedScreenshot" class="screenshot"
+					src="/images/help/login-reduced.png" /> <img
+					id="leftSideScreenshot" class="screenshot"
+					src="/images/help/left-side.png" /> <img id="portalsScreenshot"
+					class="screenshot" src="/images/help/portals.png" /> <img
+					id="galaxyMapButtonScreenshot" class="screenshot"
+					src="/images/help/galaxy-map-button.png" /> <img
+					id="baseSelection1Screenshot" class="screenshot"
+					src="/images/help/base-selection1.png" /> <img
+					id="baseSelection2Screenshot" class="screenshot"
+					src="/images/help/base-selection2.png" /> <img
+					id="rightSideScreenshot" class="screenshot"
+					src="/images/help/right-side.png" /> <img
+					id="rightSide1Screenshot" class="screenshot"
+					src="/images/help/right-side1.png" /> <img
+					id="fastTransScreenshot" class="screenshot"
+					src="/images/help/fast-trans.png" /><img id="rightSide2Screenshot"
+					class="screenshot" src="/images/help/right-side2.png" /> <img
+					id="rightSide2aScreenshot" class="screenshot"
+					src="/images/help/right-side2a.png" /> <img
+					id="rightSide2bScreenshot" class="screenshot"
+					src="/images/help/right-side2b.png" /> <img
+					id="rightSide2cScreenshot" class="screenshot"
+					src="/images/help/right-side2c.png" /> <img
+					id="rightSide2dScreenshot" class="screenshot"
+					src="/images/help/right-side2d.png" /> <img
+					id="rightSide2eScreenshot" class="screenshot"
+					src="/images/help/right-side2e.png" /> <img id="gadget1Screenshot"
+					class="screenshot" src="/images/help/gadget1.png" /> <img
+					id="gadget2Screenshot" class="screenshot"
+					src="/images/help/gadget2.png" />
+			</div>
+			<div class="footer"
+				style="width: 100%; height: 20px; margin: 0; padding: 0; background-color: inherit; background-image: none;">
+				<span>&copy; 2011 Grape</span><a class="rss"
+					href="http://feeds.feedburner.com/grape-galaxy" rel="alternate"
+					type="application/rss+xml"><img src="/images/feed-14x14.png"
+					alt="Подписаться" title="Подписаться" /> </a> <a class="gg"
+					href="/res/galaxy/galaxy-gadget.gg"><img
+					src="/images/gg-14x14.png" alt="Google Desktop Gadget"
+					title="Google Desktop Gadget" /> </a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

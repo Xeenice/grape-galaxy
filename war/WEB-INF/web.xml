@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<context-param>
+		<param-name>daysPriorToKickNotification</param-name>
+		<param-value>60</param-value>
+	</context-param>
+	<context-param>
+		<param-name>daysPriorToKick</param-name>
+		<param-value>90</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>feedbackRecipientEmails</param-name>
+		<param-value>ilyaicegrigoryev@gmail.com,aalexandrovv@gmail.com,alex@grape-galaxy.org</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>sectorRelevanceEnabled</param-name>
+		<param-value>false</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>BotEventSystem.productionEnableProbability</param-name>
+		<param-value>0.9</param-value>
+	</context-param>
+	<context-param>
+		<param-name>BotEventSystem.productionDisableProbability</param-name>
+		<param-value>0.1</param-value>
+	</context-param>
+	<context-param>
+		<param-name>BotEventSystem.defenceEnableProbability</param-name>
+		<param-value>0.9</param-value>
+	</context-param>
+	<context-param>
+		<param-name>BotEventSystem.defenceDisableProbability</param-name>
+		<param-value>0.00001</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>AntimonopolyBotEventSystem.planetCountPoints</param-name>
+		<param-value>2,12,15,20</param-value>
+	</context-param>
+	<context-param>
+		<param-name>AntimonopolyBotEventSystem.massiveAttackProbabilityPoints</param-name>
+		<param-value>0.000013888888889,0.000138888888889,0.001388888888889,0.006944444444444</param-value>
+	</context-param>
+	<context-param>
+		<param-name>AntimonopolyBotEventSystem.massiveAttackUnitCountBonus</param-name>
+		<param-value>50</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>ResourceEventSystem.resourceGrowProbabilityA</param-name>
+		<param-value>-0.0199</param-value>
+	</context-param>
+	<context-param>
+		<param-name>ResourceEventSystem.resourceGrowProbabilityB</param-name>
+		<param-value>0.02</param-value>
+	</context-param>
+	<context-param>
+		<param-name>ResourceEventSystem.resourceDeltaA</param-name>
+		<param-value>-5</param-value>
+	</context-param>
+	<context-param>
+		<param-name>ResourceEventSystem.resourceDeltaB</param-name>
+		<param-value>5</param-value>
+	</context-param>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>GalaxyController</servlet-name>
+		<servlet-class>org.grape.galaxy.server.GalaxyController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GalaxyService</servlet-name>
+		<servlet-class>org.grape.galaxy.server.GalaxyServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ChatService</servlet-name>
+		<servlet-class>org.grape.galaxy.server.ChatServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HistoryGadgetController</servlet-name>
+		<servlet-class>org.grape.galaxy.server.HistoryGadgetController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HistoryUpdateController</servlet-name>
+		<servlet-class>org.grape.galaxy.server.HistoryUpdateController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FeedbackService</servlet-name>
+		<servlet-class>org.grape.galaxy.server.FeedbackServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RatingController</servlet-name>
+		<servlet-class>org.grape.galaxy.server.RatingController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RatingService</servlet-name>
+		<servlet-class>org.grape.galaxy.server.RatingServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>StartupController</servlet-name>
+		<servlet-class>org.grape.galaxy.server.StartupController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AdminController</servlet-name>
+		<servlet-class>org.grape.galaxy.server.AdminController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>TestController</servlet-name>
+		<servlet-class>org.grape.galaxy.server.TestController</servlet-class>
+	</servlet>
+
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>Games</servlet-name> -->
+<!-- 		<jsp-file>WEB-INF/jsp/games.jsp</jsp-file> -->
+<!-- 	</servlet> -->
+
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>Game</servlet-name> -->
+<!-- 		<jsp-file>WEB-INF/jsp/game.jsp</jsp-file> -->
+<!-- 	</servlet> -->
+
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>RunGame</servlet-name> -->
+<!-- 		<jsp-file>WEB-INF/jsp/rungame.jsp</jsp-file> -->
+<!-- 	</servlet> -->
+
+	<servlet-mapping>
+		<servlet-name>GalaxyController</servlet-name>
+		<url-pattern>/computeGalaxy</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GalaxyService</servlet-name>
+		<url-pattern>/galaxy/galaxyService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ChatService</servlet-name>
+		<url-pattern>/galaxy/chatService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HistoryGadgetController</servlet-name>
+		<url-pattern>/galaxy/history</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HistoryUpdateController</servlet-name>
+		<url-pattern>/updateHistory</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FeedbackService</servlet-name>
+		<url-pattern>/galaxy/feedbackService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RatingController</servlet-name>
+		<url-pattern>/computeRating</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RatingService</servlet-name>
+		<url-pattern>/galaxy/ratingService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>StartupController</servlet-name>
+		<url-pattern>/startupGalaxy</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AdminController</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>TestController</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>Games</servlet-name> -->
+<!-- 		<url-pattern>/games</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>Game</servlet-name> -->
+<!-- 		<url-pattern>/game</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>RunGame</servlet-name> -->
+<!-- 		<url-pattern>/rungame</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+	<welcome-file-list>
+		<welcome-file>WEB-INF/jsp/galaxy.jsp</welcome-file>
+	</welcome-file-list>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Common</web-resource-name>
+			<url-pattern>/galaxy/galaxyService</url-pattern>
+			<url-pattern>/galaxy/chatService</url-pattern>
+			<url-pattern>/galaxy/feedbackService</url-pattern>
+			<url-pattern>/galaxy/ratingService</url-pattern>
+<!-- 			<url-pattern>/rungame</url-pattern> -->
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Private</web-resource-name>
+			<url-pattern>/computeGalaxy</url-pattern>
+			<url-pattern>/computeRating</url-pattern>
+			<url-pattern>/startupGalaxy</url-pattern>
+			<url-pattern>/updateHistory</url-pattern>
+			<url-pattern>/admin</url-pattern>
+			<url-pattern>/test</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+</web-app>
